@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    background-color: black; /* Clean fallback background */
+}
+
+/* Force the video to scale and cover the entire screen background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* This cuts out the black bars and stretches it perfectly */
+    z-index: -1; /* Pushes the video behind your text */
+}
+
+/* Style your text container so it sits on top of the video */
+.content {
+    position: relative;
+    z-index: 1; /* Pulls the content layer above the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Optional: Make your heading text clean and easy to read over the video */
+h1{
+    font-size: 100px;
+    text-align: center;
+}
+.p1{
+    font-size: 30px;
+    text-align: center;
+}

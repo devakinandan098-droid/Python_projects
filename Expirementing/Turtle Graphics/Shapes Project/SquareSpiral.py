@@ -1,0 +1,32 @@
+import turtle as t
+t.bgcolor("black")
+t.speed(0)
+position = t.position()
+heading = t.heading()
+color = ["red", "blue", "green"]
+t.penup()
+t.rt(90)
+t.fd(200)
+t.lt(90)
+t.fd(100)
+t.pendown()
+for x in range(6):
+    t.color(color[x%3])
+    t.penup()
+    t.lt(60)
+    t.fd(100)
+    t.pendown()
+    print(position, heading)
+    for y in range(4):
+        t.fd(100)
+        t.rt(90)
+    print(position, heading)
+t.penup()
+t.lt(100)
+t.fd(50)
+t.pendown()
+for z in range(3):
+    t.pencolor("orange")
+    t.fd(100)
+    t.lt(120)
+t.done()
